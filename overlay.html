@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; worker-src 'self'"><title>InterAI</title><link rel="stylesheet" href="overlay.css"></head><body>
+<div class="bar-panel">
+ <header class="bar-header"><div class="brand">InterAI</div><span class="status" id="state" role="status">Ready · connect audio</span><div class="controls"><button id="reconnect" title="Connect or reconnect">Connect</button><button id="pause" disabled>Pause</button><button id="setup" title="Settings">⚙</button><button id="close" aria-label="Close">×</button></div></header>
+ <section class="question"><div class="section-label">QUESTION <span class="live-tag">LIVE TRANSCRIPTION</span></div><div id="current-question" class="question-text">Your interviewer’s question will appear here.</div><div id="partial" class="partial"></div></section>
+ <section class="answer-section"><div class="section-label">ANSWER <span id="latency"></span></div><div id="answer" class="answer muted">Your answer will appear here.</div></section>
+ <div id="notice" class="notice" role="alert" hidden></div>
+ <footer class="bar-footer"><label><input type="checkbox" id="auto" checked> Answer questions automatically</label><button id="clear">Clear</button><span class="enter-hint">ENTER TO ANSWER</span></footer>
+ <div class="resize-hint" aria-hidden="true">◢</div>
+ <div class="accessibility" aria-hidden="true"><textarea id="transcript"></textarea><div id="history"></div><span id="turn-count">0 turns</span><meter id="level" min="0" max="1" value="0"></meter><meter id="mic-level" min="0" max="1" value="0"></meter><span id="system-status">Not connected</span><span id="mic-status">Off</span></div>
+</div>
+<script src="audio-gate.js"></script><script src="question-intent.js"></script><script src="overlay.js"></script></body></html>
